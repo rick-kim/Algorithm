@@ -13,12 +13,10 @@ namespace Queens
         public event TrackingFail Fail;
 
         private readonly int _size;
-        private readonly List<int[]> _result;
 
         public Task(int size)
         {
             _size = size;
-            _result = new List<int[]>();
         }
 
         public void Start()
