@@ -5,8 +5,8 @@ using System.Text;
 namespace Queens
 {
     delegate void TrackingSuccess(int[] result);
-
     delegate void TrackingFail(int level, int[] result);
+
     class Task
     {
         public event TrackingSuccess Success;
