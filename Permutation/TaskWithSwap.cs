@@ -5,16 +5,16 @@ using System.Text;
 
 namespace Permutation
 {
-    delegate void PrintPermutation(string[] result);
+    delegate void PrintPermutationWithSwap(string[] result);
 
-    class Task
+    class TaskWithSwap
     {
-        public event PrintPermutation Printing;
+        public event PrintPermutationWithSwap Printing;
 
         private readonly string[] _array;
         private readonly int _arrayLength;
 
-        public Task(string[] array)
+        public TaskWithSwap(string[] array)
         {
             _array = array;
             _arrayLength = array.Length;
