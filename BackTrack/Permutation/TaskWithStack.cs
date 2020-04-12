@@ -30,7 +30,7 @@ namespace Permutation
             
             if (tempStack.Count == _arrayLength)
             {
-                // Call print event.
+                // call print event.
                 Printing?.Invoke(tempStack);
                 return;
             }
