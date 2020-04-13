@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -9,8 +10,8 @@ namespace Permutation
         private static int _swapCounter = 1, _stackCounter = 1;
         static void Main(string[] args)
         {
-            string[] target1 = { "A", "B", "C", "D", "E", "F" };
-            string[] target2 = { "A", "B", "C", "D", "E" };
+            string[] target1 = { "A", "B", "C", "D", "E" };
+            string[] target2 = { "A", "B", "C" };
 
 
             var taskWithSwap = new TaskWithSwap(target1);
@@ -35,7 +36,7 @@ namespace Permutation
             Task.WaitAll(swapTask, stackTask);
         }
 
-        private static void StackTask_Printing(System.Collections.Generic.Stack<string> result)
+        private static void StackTask_Printing(Stack<string> result)
         {
             var resultText = string.Empty;
             foreach (var item in result.Reverse())
